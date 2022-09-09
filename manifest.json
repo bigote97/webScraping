@@ -1,0 +1,25 @@
+{
+  "name": "Scraper",
+  "description": "Con esta extension descargaremos informacion en formato .csv",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_title": "Scraper",
+    "default_icon": {
+      "16": "/images/hacker16.png",
+      "32": "/images/hacker32.png",
+      "48": "/images/hacker48.png",
+      "128": "/images/hacker128.png"
+    }
+  },
+  "icons": {
+    "16": "/images/hacker16.png",
+    "32": "/images/hacker32.png",
+    "48": "/images/hacker48.png",
+    "128": "/images/hacker128.png"
+  }
+}
