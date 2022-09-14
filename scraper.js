@@ -7,13 +7,15 @@ let productImage = document.querySelectorAll('a.imagen-prod > img');
 let mochilas = [];
 
 // Itero en los elementos que traje para obtener los que necesito
-
+var price
 for (let index = 0; index < productName.length; index++) {
 
   const name = productName[index].innerHTML;
   // transformamos el precio a Float, para que quede mejor en nuestro excel, le quitamos los caracteres especiales, y le damos un formato admisible
-  const price = parseFloat(productPrice[index].innerHTML.replace('$', '').replace('.', '').replace(',', '.'));
-
+  
+  if (productPrice[index]) {
+  price = parseFloat(productPrice[index].innerHTML.replace('$', '').replace('.', '').replace(',', '.'));
+  }
   const image = productImage[index].src
 
   // En este caso vamos a almacenar solamente los productos que sean mochilas.
